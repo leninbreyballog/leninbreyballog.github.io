@@ -3,35 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className += ' js';</script>
 
-  <title>Lenin Brey Ballog | Student of Philosophy &amp; Theology, Content Creator &amp; Writer</title>
-  <meta name="description" content="Lenin Brey Ballog is a student of Philosophy and Theology, content creator and writer, exploring classical philosophy, theological inquiry, and digital storytelling.">
+  <title>Lenin Brey Ballog | Independent Thinker: Philosophy, Theology, Literature &amp; Leadership</title>
+  <meta name="description" content="Lenin Brey Ballog is an independent thinker based in Baguio City, writing at the intersection of philosophy, theology, literature, and organizational leadership.">
   <meta name="author" content="Lenin Brey Ballog">
-  <meta name="theme-color" content="#faf6ee">
+  <meta name="theme-color" content="#020202">
+  <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://leninbreyballog.github.io/">
-<meta name="google-site-verification" content="iwl-7JNi705H4aTNF79gh5J_WHknX--3YOCw1fm27bU" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lenin Brey Ballog">
-  <meta property="og:title" content="Lenin Brey Ballog | Philosophy &amp; Theology Student, Content Creator &amp; Writer">
-  <meta property="og:description" content="Exploring the intersection of classical philosophy, theological inquiry, and digital storytelling.">
+  <meta property="og:title" content="Lenin Brey Ballog | Independent Thinker &amp; Digital Explorer">
+  <meta property="og:description" content="Philosophy, theology, literature, and leadership. Essays, reflections, and poetry from Baguio City.">
   <meta property="og:url" content="https://leninbreyballog.github.io/">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter / X card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Lenin Brey Ballog">
-  <meta name="twitter:description" content="Student of Philosophy &amp; Theology | Content Creator &amp; Writer">
+  <meta name="twitter:description" content="Philosophy • Theology • Literature • Leadership">
 
-  <!-- Structured data so search engines connect the name to this site and profiles -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Lenin Brey Ballog",
     "url": "https://leninbreyballog.github.io/",
-    "jobTitle": "Content Creator & Writer",
-    "description": "Student of Philosophy and Theology, content creator and writer.",
+    "jobTitle": "Independent Thinker & Writer",
+    "description": "Independent thinker whose interests lie at the intersection of philosophy, theology, literature, and organizational leadership.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Baguio City",
+      "addressCountry": "PH"
+    },
+    "knowsAbout": ["Philosophy", "Theology", "Literature", "Organizational leadership", "Scouting"],
     "sameAs": [
       "https://www.tiktok.com/@linenlenin",
       "https://www.instagram.com/leninbreybalog/",
@@ -42,254 +50,847 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --paper: #faf6ee;
-      --paper-shade: #f1e9da;
-      --card: #fffdf8;
-      --card-hover: #fbf4e6;
-      --brown: #6b4428;
-      --brown-deep: #4a2d18;
-      --brown-soft: #c9b394;
-      --text: #2b1d14;
-      --muted: #5c4837;
-      --accent: #7d4f2b;
-      --cream: #fdf8ee;
+      --bg: #020202;
+      --surface: #0a0a09;
+      --surface-hover: #100f0b;
+      --line: rgba(196, 171, 122, 0.18);
+      --line-strong: rgba(196, 171, 122, 0.42);
+      --text: #ece9df;
+      --body: #d6d2c6;
+      --muted: #a29d90;
+      --gold: #d4af37;
+      --gold-soft: #c4ab7a;
 
-      --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
+      --display: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
       --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
 
-    html { -webkit-text-size-adjust: 100%; }
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+      scroll-padding-top: 4.5rem;
+      background: var(--bg);
+    }
+    html.reader-open { overflow: hidden; }
 
     body {
       margin: 0;
       min-height: 100vh;
-      min-height: 100dvh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       background:
-        radial-gradient(ellipse 90% 60% at 50% 0%, #fffdf8 0%, transparent 70%),
-        var(--paper);
+        radial-gradient(60rem 38rem at 85% -5%, rgba(212, 175, 55, 0.09), transparent 65%),
+        radial-gradient(50rem 30rem at 0% 60%, rgba(196, 171, 122, 0.05), transparent 65%),
+        var(--bg);
       color: var(--text);
       font-family: var(--sans);
       font-size: 1.0625rem;
-      line-height: 1.65;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    main {
+    a { color: inherit; }
+
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    .wrap {
       width: 100%;
-      max-width: 34rem;
-      padding: clamp(3rem, 9vh, 6rem) 1.25rem 2rem;
-      flex: 1;
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 0 1.25rem;
     }
 
-    /* Header */
-    header { text-align: center; margin-bottom: 2.25rem; }
+    /* ---------- Ambient background (fixed, non-interactive) ---------- */
+    .backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
 
-    h1 {
-      margin: 0;
-      font-family: var(--serif);
+    #stars { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+    .shape {
+      position: absolute;
+      width: var(--s, 64px);
+      height: var(--s, 64px);
+      fill: none;
+      stroke: var(--gold-soft);
+      stroke-width: 1;
+      opacity: 0.28;
+      animation: drift var(--d, 20s) ease-in-out var(--delay, 0s) infinite alternate;
+      will-change: transform;
+    }
+
+    @keyframes drift {
+      from { transform: translate3d(0, 0, 0) rotate(0deg); }
+      to   { transform: translate3d(var(--dx, 14px), -34px, 0) rotate(var(--r, 50deg)); }
+    }
+
+    .site-nav, main, footer { position: relative; z-index: 1; }
+
+    /* ---------- Navigation ---------- */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(2, 2, 2, 0.82);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-nav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      height: 3.5rem;
+    }
+
+    .brand {
+      font-family: var(--display);
+      font-size: 1.35rem;
       font-weight: 700;
-      font-size: clamp(2.6rem, 11vw, 3.6rem);
-      line-height: 1.05;
       letter-spacing: 0.01em;
-      color: var(--brown-deep);
+      text-decoration: none;
+    }
+
+    .site-nav ul { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+
+    .site-nav ul a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .site-nav ul a:hover { color: var(--text); border-bottom-color: var(--gold); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(4rem, 13vh, 8rem) 0 clamp(3.5rem, 9vh, 6rem);
+    }
+
+    .hero .wrap { position: relative; z-index: 2; }
+
+    .hero h1 {
+      margin: 0;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(3rem, 11vw, 5.8rem);
+      line-height: 1;
+      letter-spacing: 0.005em;
+      color: var(--text);
+      background: linear-gradient(100deg, #f2eee2 0%, #f2eee2 42%, #e9cf7e 50%, #f2eee2 58%, #f2eee2 100%);
+      background-size: 260% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rise 1s ease both, sheen 10s ease-in-out 1.2s infinite;
+    }
+
+    @keyframes sheen {
+      0%, 100% { background-position: 100% 0; }
+      50%      { background-position: 0% 0; }
     }
 
     .tagline {
-      margin: 1rem 0 0;
-      color: var(--accent);
+      margin: 1.4rem 0 0;
+      color: var(--gold-soft);
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.5;
+      animation: rise 1s ease 0.15s both;
     }
 
-    .rule {
-      width: 4rem;
-      height: 2px;
-      margin: 1.75rem auto 0;
-      background: var(--brown);
+    .tagline span { color: var(--gold); margin: 0 0.5rem; opacity: 0.8; }
+
+    .hero hr {
+      width: 4.5rem;
+      height: 1px;
+      margin: 2.1rem 0;
       border: 0;
-      border-radius: 2px;
-      opacity: 0.75;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      animation: rise 1s ease 0.3s both;
     }
 
-    /* Bio card: a thin inner rule gives it the look of a bookplate */
-    .bio {
-      background: var(--card);
-      border: 1px solid var(--brown);
-      border-radius: 0.875rem;
-      padding: 1.75rem 1.6rem;
-      margin-bottom: 1.75rem;
-      box-shadow:
-        inset 0 0 0 5px var(--card),
-        inset 0 0 0 6px var(--brown-soft),
-        0 14px 32px rgba(74, 45, 24, 0.12);
-    }
-
-    .bio h2 {
-      margin: 0 0 0.6rem;
-      font-family: var(--serif);
-      font-size: 1.7rem;
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--brown-deep);
-    }
-
-    .bio p {
+    .hero .bio {
       margin: 0;
-      color: var(--muted);
-      max-width: 60ch;
+      max-width: 38rem;
+      font-size: 1.125rem;
+      line-height: 1.85;
+      color: var(--body);
+      animation: rise 1s ease 0.42s both;
     }
 
-    /* Links */
-    nav ul {
+    .hero .place {
+      margin: 1.5rem 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+      animation: rise 1s ease 0.55s both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* Orbital composition */
+    .orbit {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      right: -14vw;
+      width: min(80vw, 42rem);
+      aspect-ratio: 1;
+      margin-top: calc(min(80vw, 42rem) / -2);
+      perspective: 1100px;
+      pointer-events: none;
+      opacity: 0.85;
+    }
+
+    .ring {
+      position: absolute;
+      inset: var(--inset, 0);
+      border-radius: 50%;
+      border: 1px solid rgba(196, 171, 122, 0.34);
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) rotateZ(0deg);
+      animation: spin var(--dur, 40s) linear infinite var(--dir, normal);
+      will-change: transform;
+    }
+
+    .ring::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 7px;
+      height: 7px;
+      margin-left: -3.5px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 14px 3px rgba(212, 175, 55, 0.55);
+    }
+
+    .ring.r1 { --rx: 68deg; --ry: 0deg;   --dur: 46s; }
+    .ring.r2 { --inset: 12%; --rx: 72deg; --ry: 38deg;  --dur: 34s; --dir: reverse; border-color: rgba(212, 175, 55, 0.4); }
+    .ring.r3 { --inset: 26%; --rx: 58deg; --ry: -42deg; --dur: 27s; border-style: dashed; border-color: rgba(196, 171, 122, 0.3); }
+    .ring.r4 { --inset: -7%; --rx: 0deg;  --ry: 0deg;   --dur: 140s; border-color: rgba(196, 171, 122, 0.14); }
+    .ring.r4::after { width: 5px; height: 5px; margin-left: -2.5px; top: -2.5px; opacity: 0.8; }
+
+    @keyframes spin {
+      to { transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) rotateZ(360deg); }
+    }
+
+    .core {
+      position: absolute;
+      inset: 40%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.5) 0%, rgba(212, 175, 55, 0.12) 45%, transparent 70%);
+      animation: pulse 7s ease-in-out infinite;
+    }
+
+    .diamond {
+      position: absolute;
+      inset: 38%;
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      transform: rotate(45deg);
+      animation: turn 30s linear infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(0.85); opacity: 0.7; }
+      50%      { transform: scale(1.15); opacity: 1; }
+    }
+
+    @keyframes turn { to { transform: rotate(405deg); } }
+
+    /* ---------- Sections ---------- */
+    section.block {
+      padding: clamp(3rem, 8vh, 5rem) 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .section-head::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      align-self: center;
+      background: linear-gradient(90deg, var(--line-strong), transparent);
+    }
+
+    .section-head .num {
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: var(--gold);
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(2rem, 5.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    /* Writing & Works */
+    .featured {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      text-decoration: none;
+      background: linear-gradient(135deg, #0f0e0a 0%, var(--surface) 60%);
+      border: 1px solid var(--line-strong);
+      border-radius: 0.5rem;
+      padding: clamp(1.75rem, 5vw, 2.75rem) clamp(1.5rem, 5vw, 2.75rem);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .featured::before {
+      content: "";
+      position: absolute;
+      right: -4.5rem;
+      top: -4.5rem;
+      width: 14rem;
+      height: 14rem;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      box-shadow: inset 0 0 0 2.2rem rgba(212, 175, 55, 0.03), 0 0 0 1.4rem rgba(212, 175, 55, 0.03);
+      transition: transform 0.8s ease;
+    }
+
+    .featured:hover {
+      border-color: var(--gold);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(212, 175, 55, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .featured:hover::before { transform: scale(1.12) rotate(20deg); }
+
+    .featured .meta { position: relative; margin: 0 0 0.6rem; color: var(--gold-soft); font-size: 0.95rem; }
+
+    .featured h3 {
+      position: relative;
+      margin: 0 0 1.1rem;
+      font-family: var(--display);
+      font-size: clamp(2rem, 6vw, 2.9rem);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .featured .cta { position: relative; color: var(--gold); font-weight: 600; }
+
+    .archive {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .archive article {
+      border: 1px solid var(--line);
+      border-radius: 0.5rem;
+      padding: 1.25rem 1.25rem 1.1rem;
+      background: rgba(10, 10, 9, 0.6);
+    }
+
+    .archive h3 { margin: 0 0 0.2rem; font-family: var(--display); font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
+    .archive p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+
+    /* Pillars */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
       list-style: none;
       margin: 0;
       padding: 0;
-      display: grid;
-      gap: 0.875rem;
     }
 
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.7rem;
-      width: 100%;
-      padding: 1rem 1.25rem;
-      border-radius: 0.75rem;
-      border: 1px solid var(--brown);
-      background: var(--card);
-      color: var(--brown-deep);
-      font-family: var(--sans);
-      font-size: 1.0625rem;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 5px 14px rgba(74, 45, 24, 0.10);
-      transition: transform 0.18s ease, box-shadow 0.18s ease,
-                  background-color 0.18s ease, border-color 0.18s ease;
+    .pillar {
+      height: 100%;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 0.5rem;
+      padding: 1.6rem 1.5rem 1.75rem;
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .btn svg {
-      width: 1.3rem;
-      height: 1.3rem;
-      flex: none;
+    .pillar:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.06);
+    }
+
+    .pillar svg {
+      width: 2.6rem;
+      height: 2.6rem;
+      margin-bottom: 1.1rem;
       fill: none;
-      stroke: currentColor;
-      stroke-width: 1.8;
+      stroke: var(--gold);
+      stroke-width: 1.2;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
-    .btn:hover {
+    .pillar h3 { margin: 0 0 0.25rem; font-family: var(--display); font-size: 1.6rem; font-weight: 700; line-height: 1.2; }
+    .pillar .focus { margin: 0 0 0.9rem; color: var(--gold-soft); font-size: 0.95rem; font-weight: 600; }
+    .pillar .desc { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.65; }
+
+    /* Connect */
+    .connect-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+    }
+
+    .connect-list a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      height: 100%;
+      padding: 1.1rem 1.25rem;
+      text-decoration: none;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 0.5rem;
+      transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .connect-list a:hover {
+      border-color: var(--gold);
+      background: var(--surface-hover);
       transform: translateY(-2px);
-      background: var(--card-hover);
-      border-color: var(--brown-deep);
-      box-shadow: 0 12px 24px rgba(74, 45, 24, 0.20);
     }
 
-    .btn:active { transform: translateY(0); }
-
-    .btn:focus-visible {
-      outline: 3px solid var(--brown);
-      outline-offset: 3px;
+    .connect-list svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      flex: none;
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
-    .btn-primary {
-      padding: 1.15rem 1.25rem;
-      background: var(--brown);
-      border-color: var(--brown);
-      color: var(--cream);
-      font-size: 1.15rem;
-      box-shadow: 0 10px 24px rgba(74, 45, 24, 0.28);
-    }
-
-    .btn-primary:hover {
-      background: var(--brown-deep);
-      border-color: var(--brown-deep);
-      box-shadow: 0 14px 30px rgba(74, 45, 24, 0.36);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      box-shadow: none;
-    }
-
-    .btn-ghost:hover { box-shadow: 0 8px 18px rgba(74, 45, 24, 0.16); }
+    .connect-list .txt { display: flex; flex-direction: column; min-width: 0; line-height: 1.4; }
+    .connect-list .label { font-weight: 600; }
+    .connect-list .detail { color: var(--muted); font-size: 0.92rem; overflow-wrap: anywhere; }
 
     /* Footer */
     footer {
-      width: 100%;
-      max-width: 34rem;
-      padding: 1.5rem 1.25rem 2rem;
-      text-align: center;
+      border-top: 1px solid var(--line);
+      padding: 2.25rem 0 2.75rem;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      text-align: center;
     }
 
     footer p { margin: 0; }
 
+    /* ---------- Reader (modal) ---------- */
+    dialog.reader {
+      width: min(52rem, calc(100% - 1rem));
+      height: 90vh;
+      height: 90dvh;
+      max-height: none;
+      padding: 0;
+      border: 1px solid var(--line-strong);
+      border-radius: 0.5rem;
+      background: #050505;
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    dialog.reader[open] { display: flex; flex-direction: column; }
+
+    dialog.reader::backdrop { background: rgba(0, 0, 0, 0.82); }
+
+    .reader-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .reader-bar .title {
+      flex: 1;
+      min-width: 0;
+      font-family: var(--display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .reader-bar a, .reader-close {
+      font: inherit;
+      font-size: 0.92rem;
+      color: var(--gold-soft);
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--line-strong);
+      border-radius: 0.375rem;
+      padding: 0.3rem 0.8rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .reader-bar a:hover, .reader-close:hover { color: var(--text); border-color: var(--gold); }
+
+    .reader iframe {
+      flex: 1;
+      width: 100%;
+      border: 0;
+      background: #050505;
+    }
+
+    /* ---------- Reveal on scroll ---------- */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+      transition-delay: var(--i, 0ms);
+    }
+
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 52rem) {
+      .archive, .pillars { grid-template-columns: 1fr; }
+      .orbit { opacity: 0.45; right: -30vw; width: 100vw; margin-top: -50vw; }
+    }
+
+    @media (max-width: 40rem) {
+      .connect-list { grid-template-columns: 1fr; }
+      .brand { display: none; }
+      .site-nav .wrap { justify-content: center; }
+      .site-nav ul { gap: 1.5rem; }
+      .reader-bar .title { display: none; }
+      .reader-bar { justify-content: space-between; }
+      .shape.hide-sm { display: none; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      .btn { transition: none; }
-      .btn:hover { transform: none; }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .js .reveal { opacity: 1; transform: none; }
+      .hero h1 { background-position: 0 0; }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <header>
-      <h1>Lenin Brey Ballog</h1>
-      <p class="tagline">Student of Philosophy &amp; Theology | Content Creator &amp; Writer</p>
-      <hr class="rule">
+  <!-- Ambient background -->
+  <div class="backdrop" aria-hidden="true">
+    <canvas id="stars"></canvas>
+
+    <svg class="shape" style="left:7%; top:24%; --s:72px; --d:22s; --r:60deg;" viewBox="0 0 100 100"><polygon points="50,6 92,28 92,72 50,94 8,72 8,28"/><polygon points="50,28 72,40 72,60 50,72 28,60 28,40"/></svg>
+    <svg class="shape" style="right:9%; top:64%; --s:60px; --d:26s; --r:-70deg; --dx:-18px; --delay:-6s;" viewBox="0 0 100 100"><polygon points="50,8 94,88 6,88"/><polygon points="50,40 70,76 30,76"/></svg>
+    <svg class="shape hide-sm" style="left:16%; top:74%; --s:54px; --d:30s; --r:90deg; --delay:-12s;" viewBox="0 0 100 100"><rect x="14" y="14" width="72" height="72"/><rect x="30" y="30" width="40" height="40" transform="rotate(45 50 50)"/></svg>
+    <svg class="shape" style="right:34%; top:10%; --s:44px; --d:24s; --r:40deg; --dx:10px; --delay:-3s;" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42"/><circle cx="50" cy="50" r="22"/></svg>
+    <svg class="shape hide-sm" style="left:46%; top:52%; --s:38px; --d:34s; --r:-50deg; --delay:-18s; opacity:.2;" viewBox="0 0 100 100"><polygon points="50,6 94,50 50,94 6,50"/></svg>
+  </div>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="wrap">
+      <a class="brand" href="#top">Lenin Brey Ballog</a>
+      <ul>
+        <li><a href="#writing">Writing &amp; Works</a></li>
+        <li><a href="#practice">Pillars of Practice</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="orbit" aria-hidden="true">
+        <div class="ring r4"></div>
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="diamond"></div>
+        <div class="core"></div>
+      </div>
+
+      <div class="wrap">
+        <h1>Lenin Brey Ballog</h1>
+        <p class="tagline">Philosophy<span aria-hidden="true">•</span>Theology<span aria-hidden="true">•</span>Literature<span aria-hidden="true">•</span>Leadership</p>
+        <hr>
+        <p class="bio">Lenin Brey Ballog is an independent thinker whose interests lie at the intersection of philosophy, theology, literature, and organizational leadership. Based in Baguio City, he pursues a broad range of intellectual and practical interests, from classical thought and theological inquiry to scouting and team governance. His pursuits reflect an enduring interest in understanding ideas, examining perspectives, and translating principles into meaningful action.</p>
+        <p class="place">Baguio City, Philippines</p>
+      </div>
     </header>
 
-    <section class="bio" aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
-      <p>Exploring the intersection of classical philosophy, theological inquiry, and digital storytelling. Dedicated to structured thinking, written discourse, and creating engaging online content.</p>
+    <section class="block" id="writing" aria-labelledby="writing-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="num" aria-hidden="true">i.</span>
+          <h2 id="writing-h">Writing &amp; Works</h2>
+        </div>
+
+        <div class="reveal">
+          <a class="featured" id="open-piece" href="writing/the-view-from-my-window.html" aria-haspopup="dialog">
+            <p class="meta">Featured &middot; First piece</p>
+            <h3>The View From My Window</h3>
+            <span class="cta">Read the piece &rarr;</span>
+          </a>
+        </div>
+
+        <div class="archive">
+          <article class="reveal" style="--i:60ms"><h3>Essays</h3><p>Forthcoming</p></article>
+          <article class="reveal" style="--i:140ms"><h3>Reflections</h3><p>Forthcoming</p></article>
+          <article class="reveal" style="--i:220ms"><h3>Poetry</h3><p>Forthcoming</p></article>
+        </div>
+      </div>
     </section>
 
-    <nav aria-label="Links">
-      <ul>
-        <li>
-          <a class="btn btn-primary" href="https://www.tiktok.com/@linenlenin" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3c0 2.5 2 4.5 5 4.5"/></svg>
-            Follow on TikTok
-          </a>
-        </li>
-        <li>
-          <a class="btn" href="https://www.instagram.com/leninbreybalog/" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6"/></svg>
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a class="btn" href="https://www.facebook.com/leninbrey.balog" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M16 8h-1.5A1.5 1.5 0 0 0 13 9.5V21"/><path d="M10 13h5"/></svg>
-            Facebook
-          </a>
-        </li>
-        <li>
-          <a class="btn btn-ghost" href="mailto:your-email@example.com">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
-            Contact &amp; Inquiries
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <section class="block" id="practice" aria-labelledby="practice-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="num" aria-hidden="true">ii.</span>
+          <h2 id="practice-h">Pillars of Practice</h2>
+        </div>
+
+        <ul class="pillars">
+          <li class="reveal">
+            <div class="pillar">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="4"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8"/></svg>
+              <h3>Intellectual Inquiry</h3>
+              <p class="focus">Philosophy, Theology &amp; Literature</p>
+              <p class="desc">Reading classical thought and theological questions closely, and weighing ideas from more than one perspective before settling on a view.</p>
+            </div>
+          </li>
+          <li class="reveal" style="--i:100ms">
+            <div class="pillar">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,4 44,40 4,40"/><polygon points="24,18 33,34 15,34"/><path d="M24 4v14"/></svg>
+              <h3>Organizational Leadership</h3>
+              <p class="focus">Scouting &amp; Governance</p>
+              <p class="desc">Testing principles where they have to hold up in practice: guiding teams, sharing responsibility, and governing with clarity.</p>
+            </div>
+          </li>
+          <li class="reveal" style="--i:200ms">
+            <div class="pillar">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,4 44,24 24,44 4,24"/><polygon points="24,14 34,24 24,34 14,24"/><path d="M24 4v40M4 24h40"/></svg>
+              <h3>Creative Execution</h3>
+              <p class="focus">Writing &amp; Digital Projects</p>
+              <p class="desc">Turning ideas into essays, reflections, and digital work that others can read, use, and respond to.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="connect" aria-labelledby="connect-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="num" aria-hidden="true">iii.</span>
+          <h2 id="connect-h">Connect</h2>
+        </div>
+
+        <ul class="connect-list">
+          <li class="reveal">
+            <a href="https://www.instagram.com/leninbreybalog/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6"/></svg>
+              <span class="txt"><span class="label">Instagram</span><span class="detail">@leninbreybalog</span></span>
+            </a>
+          </li>
+          <li class="reveal" style="--i:60ms">
+            <a href="https://www.facebook.com/leninbrey.balog" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M16 8h-1.5A1.5 1.5 0 0 0 13 9.5V21"/><path d="M10 13h5"/></svg>
+              <span class="txt"><span class="label">Facebook</span><span class="detail">leninbrey.balog</span></span>
+            </a>
+          </li>
+          <li class="reveal" style="--i:120ms">
+            <a href="https://www.tiktok.com/@linenlenin" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 3c0 2.5 2 4.5 5 4.5"/></svg>
+              <span class="txt"><span class="label">TikTok</span><span class="detail">@linenlenin</span></span>
+            </a>
+          </li>
+          <li class="reveal" style="--i:180ms">
+            <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              <span class="txt"><span class="label">GitHub</span><span class="detail">Code &amp; digital projects</span></span>
+            </a>
+          </li>
+          <li class="reveal" style="--i:240ms">
+            <a href="mailto:your-email@example.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+              <span class="txt"><span class="label">Email</span><span class="detail">your-email@example.com</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Lenin Brey Ballog. All rights reserved.</p>
+    <div class="wrap">
+      <p>&copy; 2026 Lenin Brey Ballog. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Reader modal: shows writing/the-view-from-my-window.html in place -->
+  <dialog class="reader" id="reader" aria-labelledby="reader-title">
+    <div class="reader-bar">
+      <span class="title" id="reader-title">The View From My Window</span>
+      <a href="writing/the-view-from-my-window.html">Open full page</a>
+      <button class="reader-close" type="button" id="close-reader">Close</button>
+    </div>
+    <iframe id="reader-frame" title="The View From My Window" loading="lazy"></iframe>
+  </dialog>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---- Floating gold particles (lightweight canvas) ---- */
+      var canvas = document.getElementById('stars');
+      var ctx = canvas && canvas.getContext ? canvas.getContext('2d') : null;
+      if (ctx) {
+        var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+        var W = 0, H = 0, running = false, last = 0;
+        var count = window.innerWidth < 640 ? 26 : 50;
+        var motes = [];
+
+        for (var i = 0; i < count; i++) {
+          motes.push({
+            x: Math.random(),
+            y: Math.random(),
+            r: 0.4 + Math.random() * 1.2,
+            vx: (Math.random() - 0.5) * 0.004,
+            vy: -(0.004 + Math.random() * 0.014),
+            ph: Math.random() * 6.283,
+            sp: 0.4 + Math.random() * 0.9,
+            a: 0.25 + Math.random() * 0.55
+          });
+        }
+
+        var size = function () {
+          W = window.innerWidth;
+          H = window.innerHeight;
+          canvas.width = Math.round(W * dpr);
+          canvas.height = Math.round(H * dpr);
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        };
+
+        var draw = function (t) {
+          ctx.clearRect(0, 0, W, H);
+          for (var i = 0; i < motes.length; i++) {
+            var m = motes[i];
+            var tw = 0.55 + 0.45 * Math.sin(m.ph + t * 0.001 * m.sp);
+            ctx.globalAlpha = m.a * tw;
+            ctx.fillStyle = '#d4af37';
+            ctx.beginPath();
+            ctx.arc(m.x * W, m.y * H, m.r, 0, 6.283);
+            ctx.fill();
+          }
+          ctx.globalAlpha = 1;
+        };
+
+        var frame = function (t) {
+          if (!running) return;
+          var dt = Math.min((t - last) / 1000, 0.1);
+          last = t;
+          for (var i = 0; i < motes.length; i++) {
+            var m = motes[i];
+            m.x += m.vx * dt * 12;
+            m.y += m.vy * dt * 12;
+            if (m.y < -0.02) { m.y = 1.02; m.x = Math.random(); }
+            if (m.x < -0.02) m.x = 1.02;
+            if (m.x > 1.02) m.x = -0.02;
+          }
+          draw(t);
+          requestAnimationFrame(frame);
+        };
+
+        var start = function () {
+          if (running || reduce) return;
+          running = true;
+          last = performance.now();
+          requestAnimationFrame(frame);
+        };
+
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () { size(); if (!running) draw(performance.now()); }, 150);
+        });
+
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) { running = false; } else { start(); }
+        });
+
+        size();
+        draw(0);
+        start();
+      }
+
+      /* ---- Reveal on scroll ---- */
+      var items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !reduce) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        items.forEach(function (el) { io.observe(el); });
+      } else {
+        items.forEach(function (el) { el.classList.add('in'); });
+      }
+
+      /* ---- Reader modal ---- */
+      var dlg = document.getElementById('reader');
+      var link = document.getElementById('open-piece');
+      var closeBtn = document.getElementById('close-reader');
+      var frame = document.getElementById('reader-frame');
+      var root = document.documentElement;
+
+      if (dlg && link && typeof dlg.showModal === 'function') {
+        link.addEventListener('click', function (e) {
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          e.preventDefault();
+          if (!frame.getAttribute('src')) frame.setAttribute('src', link.getAttribute('href'));
+          dlg.showModal();
+          root.classList.add('reader-open');
+        });
+
+        closeBtn.addEventListener('click', function () { dlg.close(); });
+        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+        dlg.addEventListener('close', function () {
+          root.classList.remove('reader-open');
+          link.focus();
+        });
+      }
+    })();
+  </script>
 </body>
-  </html>
-  
+</html>
